@@ -8,6 +8,7 @@
             [markdown.core :refer [md->html]]
             [ireadit.ajax :as ajax]
             [ireadit.events]
+            [ireadit.views.form :as form]
             [secretary.core :as secretary])
   (:import goog.History))
 
@@ -34,7 +35,8 @@
      [b/Collapse {:is-open @expanded? :navbar true}
       [b/Nav {:class-name "mr-auto" :navbar true}
        [nav-link "#/" "Home" :home]
-       [nav-link "#/about" "About" :about]]]]))
+       [nav-link "#/about" "About" :about]
+       [nav-link "#/transcribe" "Transcribe" :transcribe]]]]))
 
 (defn about-page []
   [:div.container
@@ -51,7 +53,8 @@
 
 (def pages
   {:home #'home-page
-   :about #'about-page})
+   :about #'about-page
+   :transcribe #'form/form-page})
 
 (defn page []
   [:div
@@ -68,6 +71,9 @@
 
 (secretary/defroute "/about" []
   (rf/dispatch [:navigate :about]))
+
+(secretary/defroute "/transcribe" []
+  (rf/dispatch [:navigate :transcribe]))
 
 ;; -------------------------
 ;; History

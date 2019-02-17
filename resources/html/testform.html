@@ -7,14 +7,14 @@
         <link href="css/standard.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <form action="http://loriner.journeyman.cc:8888/v1/tesseract/" method="post">
+        <form action="http://loriner.journeyman.cc:8888/v1/tesseract/" method="POST">
             <p class="widget">
                 <label for="image-url" title="URL of the image you wish to transcribe">Image URL</label>
-                <input id="image-url" type="text"/>
+                <input id="image-url" type="text" size="80"/>
             </p>
             <p class="widget">
-                <label for="submit">{% i18n change-pass-prompt %}</label>
-                <input name="action" id="action" type="submit" class="action" value="{% i18n change-pass-link %}!"/>
+                <label for="submit">To transcribe the text of this image</label>
+                <input name="action" id="action" type="submit" class="action" value="Transcribe!"/>
             </p>
         </form>
     </body>

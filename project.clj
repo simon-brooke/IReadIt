@@ -4,6 +4,8 @@
   :url "http://example.com/FIXME"
 
   :dependencies [[baking-soda "0.2.0" :exclusions [cljsjs/react-bootstrap]]
+                 [binaryage/devtools "0.9.10"]
+                 [com.cemerick/url "0.1.1"]
                  [cheshire "5.8.1"]
                  [clj-commons/secretary "1.2.4"]
                  [clj-oauth "1.5.5"]
@@ -41,7 +43,7 @@
                  [selmer "1.12.6"]]
 
   :min-lein-version "2.0.0"
-  
+
   :source-paths ["src/clj" "src/cljs" "src/cljc"]
   :test-paths ["test/clj"]
   :resource-paths ["resources" "target/cljsbuild"]
@@ -58,7 +60,7 @@
    :nrepl-port 7002
    :css-dirs ["resources/public/css"]
    :nrepl-middleware [cider.piggieback/wrap-cljs-repl]}
-  
+
 
   :profiles
   {:uberjar {:omit-source true
@@ -77,8 +79,8 @@
                  :closure-warnings
                  {:externs-validation :off :non-standard-jsdoc :off}
                  :externs ["react/externs/react.js"]}}}}
-             
-             
+
+
              :aot :all
              :uberjar-name "ireadit.jar"
              :source-paths ["env/prod/clj"]
@@ -116,9 +118,9 @@
                       :pretty-print true
                       :closure-defines {"re_frame.trace.trace_enabled_QMARK_" true}
                       :preloads [re-frisk.preload]}}}}
-                  
-                  
-                  
+
+
+
                   :doo {:build "test"}
                   :source-paths ["env/dev/clj"]
                   :resource-paths ["env/dev/resources"]
@@ -136,7 +138,7 @@
                       :main "ireadit.doo-runner"
                       :optimizations :whitespace
                       :pretty-print true}}}}
-                  
+
                   }
    :profiles/dev {}
    :profiles/test {}})
