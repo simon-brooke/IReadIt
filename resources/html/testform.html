@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>IReadIt test form.</title>
+        <link href="css/standard.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <form action="http://loriner.journeyman.cc:8888/v1/tesseract/" method="post">
+            <p class="widget">
+                <label for="image-url" title="URL of the image you wish to transcribe">Image URL</label>
+                <input id="image-url" type="text"/>
+            </p>
+            <p class="widget">
+                <label for="submit">{% i18n change-pass-prompt %}</label>
+                <input name="action" id="action" type="submit" class="action" value="{% i18n change-pass-link %}!"/>
+            </p>
+        </form>
+    </body>
+</html>
