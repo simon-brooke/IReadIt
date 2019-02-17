@@ -10,8 +10,8 @@
    {:swagger {:ui "/swagger-ui"
               :spec "/swagger.json"
               :data {:info {:version "1.0.0"
-                            :title "Sample API"
-                            :description "Sample Services"}}}}
+                            :title "I Read It API"
+                            :description "Meme transcription services"}}}}
 
    (context "/api" []
             :tags ["tesseractor"]

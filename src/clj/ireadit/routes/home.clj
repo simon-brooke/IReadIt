@@ -1,5 +1,6 @@
 (ns ireadit.routes.home
   (:require [ireadit.layout :as layout]
+            [ireadit.views.form :refer :all]
             [compojure.core :refer [defroutes GET]]
             [ring.util.http-response :as response]
             [clojure.java.io :as io]))

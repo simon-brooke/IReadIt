@@ -43,7 +43,7 @@
      {:http-xhrio {:method          :post
                    :uri             uri
                    :format          (ajax/json-request-format)
-                   :response-format (ajax/json-response-format {:keywords? true})
+                   :response-format (ajax/json-response-format)
                    :on-success      [:set-transcription]
                    :on-failure      [:bad-transcription]}})))
 
