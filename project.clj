@@ -1,6 +1,6 @@
 (defproject ireadit "0.1.0-SNAPSHOT"
 
-  :description "FIXME: write description"
+  :description "a bot to automatically OCR memes and other text-as-graphics posted to social media"
   :url "http://example.com/FIXME"
 
   :dependencies [[baking-soda "0.2.0" :exclusions [cljsjs/react-bootstrap]]
@@ -18,6 +18,7 @@
                  [cprop "0.1.13"]
                  [day8.re-frame/http-fx "0.1.6"]
                  [funcool/struct "1.3.0"]
+                 [com.github.jai-imageio/jai-imageio-core "1.4.0"]
                  [luminus-immutant "0.2.5"]
                  [luminus-transit "0.1.1"]
                  [luminus/ring-ttl-session "0.3.2"]
@@ -40,7 +41,8 @@
                  [ring-webjars "0.2.0"]
                  [ring/ring-core "1.7.1"]
                  [ring/ring-defaults "0.3.2"]
-                 [selmer "1.12.6"]]
+                 [selmer "1.12.6"]
+                 [net.sourceforge.tess4j/tess4j "4.3.1"]]
 
   :min-lein-version "2.0.0"
 

@@ -16,3 +16,5 @@ profiles.clj
 \.rebel_readline_history
 
 [0-9a-f]*-init\.clj
+
+*.log

@@ -1,4 +1,6 @@
-(ns ireadit.nrepl
+(ns ^{:doc "Meme transcriber: command line support"
+      :author "Simon Brooke"}
+  ireadit.nrepl
   (:require [nrepl.server :as nrepl]
             [clojure.tools.logging :as log]))
 

@@ -36,7 +36,7 @@
 (rf/reg-event-fx
  :fetch-transcription
  (fn [{db :db} _]
-   (let [uri (str "http://loriner.journeyman.cc:8888/v1/tesseract/" (url-encode (:url db)))]
+   (let [uri (str "/api/ocr/" (url-encode (:url db)))]
      (js/console.log
       (str
        "Fetching transcription data: " uri))
