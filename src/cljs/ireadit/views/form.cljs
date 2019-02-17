@@ -13,9 +13,8 @@
 
 
 (defn form-page []
-  [:div
-   [:h1 "Transcribe the text of an image"]
    [:div.container {:id "main-container"}
+   [:h1 "Transcribe the text of an image"]
     [:div
      [:p.widget
       [b/Label {:for "image-url" :title "URL of the image you wish to transcribe"}"Image URL"]
@@ -24,6 +23,5 @@
      [:p.widget
       [b/Label {:for "send"} "To transcribe the image"]
       [b/Button {:id "send" :on-click #(rf/dispatch [:fetch-transcription])} "Transcribe!"]]]
-    [:div.transcription @(rf/subscribe [:transcription])]
-    ]])
+    [:div.transcription @(rf/subscribe [:transcription])]])
 

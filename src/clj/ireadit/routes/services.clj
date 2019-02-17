@@ -19,4 +19,4 @@
             (POST "/ocr/:uri" []
                   :return       String
                   :path-params [uri :- String]
-                  (ocr (url-decode uri))))))
+                  {:i-read (ocr (url-decode uri))}))))

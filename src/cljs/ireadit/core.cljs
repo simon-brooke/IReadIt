@@ -34,9 +34,8 @@
      [b/NavbarToggler {:on-click #(swap! expanded? not)}]
      [b/Collapse {:is-open @expanded? :navbar true}
       [b/Nav {:class-name "mr-auto" :navbar true}
-       [nav-link "#/" "Home" :home]
-       [nav-link "#/about" "About" :about]
-       [nav-link "#/transcribe" "Transcribe" :transcribe]]]]))
+       [nav-link "#/" "Transcribe" :transcribe]
+       [nav-link "#/about" "About" :about]]]]))
 
 (defn about-page []
   [:div.container
@@ -67,7 +66,7 @@
 (secretary/set-config! :prefix "#")
 
 (secretary/defroute "/" []
-  (rf/dispatch [:navigate :home]))
+  (rf/dispatch [:navigate :transcribe]))
 
 (secretary/defroute "/about" []
   (rf/dispatch [:navigate :about]))
