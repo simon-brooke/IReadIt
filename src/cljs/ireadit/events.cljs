@@ -22,8 +22,9 @@
 
 (rf/reg-event-db
   :set-transcription
-  (fn [db [_ transcription]]
-    (assoc db :transcription transcription)))
+  (fn [db [_ response]]
+    (js/console.log (str "Failed to fetch transcription data" response))
+    (assoc db :transcription response)))
 
 (rf/reg-event-fx
   :fetch-docs
