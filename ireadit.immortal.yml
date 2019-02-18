@@ -1,0 +1,22 @@
+# Configuration file to allow `immortal` to restart ireadit if it crashes
+# (which it all too frequently does, because of some problem in the Tess4J
+# layer). See https://immortal.run/
+
+cmd: java -jar /usr/local/bin/ireadit.jar
+cwd: /usr/local/lib/ireadit
+env:
+    DEBUG: 1
+    ENVIRONMENT: production
+pid:
+    follow: /usr/local/lib/ireadit/ireadit.pid
+    parent: /usr/local/lib/ireadit/parent.pid
+    child: /usr/local/lib/ireadit/child.pid
+log:
+    file: /var/log/ireadit.log
+    age: 86400 # seconds
+    num: 7     # int
+    size: 1    # MegaBytes
+    timestamp: true # will add timesamp to log
+logger: logger -t ireadit
+user: www-data
+wait: 1
