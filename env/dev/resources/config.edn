@@ -1,1 +1,6 @@
-{:tess-data "/usr/local/Cellar/tesseract/4.0.0_1/share/tessdata/"}
+{:tess-data "/usr/local/Cellar/tesseract/4.0.0_1/share/tessdata/"
+ :app_key "applicationkey"
+ :app_secret "applicationsecret"
+ :user_token "simon-brooke-ireadit"
+ :user_secret "somesortofnonsense"
+ :bot_account "IReadIt"}

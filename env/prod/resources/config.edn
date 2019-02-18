@@ -1,3 +1,8 @@
 {:prod true
  :port 8889
- :tess-data "/usr/share/tesseract-ocr/tessdata"}
+ :tess-data "/usr/share/tesseract-ocr/tessdata"
+ :app_key "applicationkey"
+ :app_secret "applicationsecret"
+ :user_token "simon-brooke-ireadit"
+ :user_secret "somesortofnonsense"
+ :bot_account "IReadIt"}

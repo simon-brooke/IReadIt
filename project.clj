@@ -18,6 +18,7 @@
                  [cprop "0.1.13"]
                  [day8.re-frame/http-fx "0.1.6"]
                  [funcool/struct "1.3.0"]
+                 [http.async.client "1.3.0"]
                  [com.github.jai-imageio/jai-imageio-core "1.4.0"]
                  [luminus-immutant "0.2.5"]
                  [luminus-transit "0.1.1"]
@@ -27,6 +28,7 @@
                  [metosin/muuntaja "0.6.3"]
                  [metosin/ring-http-response "0.9.1"]
                  [mount "0.1.16"]
+                 [net.sourceforge.tess4j/tess4j "4.3.1"]
                  [nrepl "0.6.0"]
                  [org.clojure/clojure "1.10.0"]
                  [org.clojure/clojurescript "1.10.520" :scope "provided"]
@@ -42,7 +44,8 @@
                  [ring/ring-core "1.7.1"]
                  [ring/ring-defaults "0.3.2"]
                  [selmer "1.12.6"]
-                 [net.sourceforge.tess4j/tess4j "4.3.1"]]
+                 [twitter-api "1.8.0"]
+                 [twitter-streaming-client "0.3.3"]]
 
   :min-lein-version "2.0.0"
 

@@ -34,10 +34,6 @@
 
 ;;; Cribbed partly from https://github.com/hugoArregui/tesseract-clojure
 
-;; (def tesseract-data-dir "/usr/share/tessdata")
-;; (def language "eng")
-;; (def test-file "eurotext.png")
-
 (defn prepare-tesseract [data-path]
   (let [t (Tesseract.)]
     (.setDatapath t data-path)

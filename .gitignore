@@ -18,3 +18,5 @@ profiles.clj
 [0-9a-f]*-init\.clj
 
 *.log
+
+env/prod/resources/config\.edn
