@@ -30,5 +30,8 @@
     [b/Row]
     [b/Row
      [:div.col-sm-12
-      [b/Alert {:color "success"} @(rf/subscribe [:transcription])]]]]])
+      [b/Alert {:color "success"} @(rf/subscribe [:transcription])]]]
+    [b/Row
+     [:div.col-sm-12
+      [b/Alert {:color "warning"} @(rf/subscribe [:common/error])]]]]])
 

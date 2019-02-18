@@ -46,14 +46,16 @@
                    :format          (ajax/json-request-format)
                    :response-format (ajax/json-response-format)
                    :on-success      [:set-transcription]
-                   :on-failure      [:bad-transcription]}})))
+                   :on-failure      [:bad-transcription]}
+      :db (dissoc (dissoc db :transcription) :common/error)})))
 
 (rf/reg-event-fx
   :bad-transcription
   (fn
     [{db :db} [_ response]]
     ;; TODO: signal something has failed? It doesn't matter very much, unless it keeps failing.
-    (js/console.log (str "Failed to fetch transcription data" response))))
+    (js/console.log (str "Failed to fetch transcription data" response))
+    (assoc db :common/error response)))
 
 (rf/reg-event-db
   :common/set-error
