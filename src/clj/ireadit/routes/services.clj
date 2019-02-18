@@ -1,8 +1,9 @@
 (ns ireadit.routes.services
-  (:require [ring.util.http-response :refer :all]
-            [cemerick.url :refer (url-decode)]
+  (:require [cemerick.url :refer (url-decode)]
+            [clojure.tools.logging :as log]
             [compojure.api.sweet :refer :all]
             [ireadit.tesseractor :refer [ocr]]
+            [ring.util.http-response :refer :all]
             [schema.core :as s]))
 
 (def service-routes
@@ -19,4 +20,7 @@
             (POST "/ocr/:uri" []
                   :return       String
                   :path-params [uri :- String]
-                  (ok (ocr (url-decode uri)))))))
+                  (ok (let [decoded (url-decode uri)
+                            text (ocr decoded)]
+                        (log/info (str "ocr '" decoded "' => '" text "'"))
+                        text))))))

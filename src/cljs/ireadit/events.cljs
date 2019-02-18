@@ -41,7 +41,7 @@
                    :response-format (ajax/json-response-format)
                    :on-success      [:set-transcription]
                    :on-failure      [:bad-transcription]}
-      :db (assoc (dissoc (dissoc db :transcription) :common/error) :pending true)})))
+      :db (assoc (dissoc db :transcription :common/error :error) :pending true)})))
 
 (rf/reg-event-db
   :set-transcription
@@ -49,18 +49,18 @@
     (js/console.log (str "Failed to fetch transcription data" response))
     (dissoc (assoc db :transcription response) :pending)))
 
-(rf/reg-event-fx
+(rf/reg-event-db
   :bad-transcription
   (fn
-    [{db :db} [_ response]]
+    [db [_ response]]
     ;; TODO: signal something has failed? It doesn't matter very much, unless it keeps failing.
     (js/console.log (str "Failed to fetch transcription data" response))
-    (dissoc (assoc db :common/error response) :pending)))
+    (dissoc (assoc db :error response) :pending)))
 
 (rf/reg-event-db
   :common/set-error
   (fn [db [_ error]]
-    (assoc db :common/error error)))
+    (assoc (assoc db :common/error error) :error error)))
 
 ;;subscriptions
 
@@ -78,6 +78,11 @@
   :common/error
   (fn [db _]
     (:common/error db)))
+
+(rf/reg-sub
+  :error
+  (fn [db _]
+    (:error db)))
 
 (rf/reg-sub
  :url

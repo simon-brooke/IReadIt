@@ -39,6 +39,6 @@
      [:div.col-sm-12 {:class (if @(rf/subscribe [:transcription]) "visible" "hidden")}
       [b/Alert {:color "success"} @(rf/subscribe [:transcription])]]]
     [b/Row
-     [:div.col-sm-12 {:class (if @(rf/subscribe [:common/error]) "visible" "hidden")}
-      [b/Alert {:color "warning"} @(rf/subscribe [:common/error])]]]]])
+     [:div.col-sm-12 {:class (if @(rf/subscribe [:error]) "visible" "hidden")}
+      [b/Alert {:color "warning"} @(rf/subscribe [:error])]]]]])
 
