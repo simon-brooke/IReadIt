@@ -11,6 +11,12 @@
             [secretary.core :as secretary])
   (:import goog.History))
 
+(defn maybe-disable [m]
+  (if
+    @(rf/subscribe [:pending])
+    (assoc m :disabled "disabled")
+    m))
+
 
 (defn form-page []
   [:div.container-fluid {:id "main-container"}
@@ -21,17 +27,18 @@
       [b/Label {:for "image-url" :title "URL of the image you wish to transcribe"}"Image URL"]]
      [:div.col-sm-9
       [b/Input {:id "image-url" :type "text" :size "80"
-                :on-change #(rf/dispatch [:set-url (.-value (.-target %))])}]]]
+                :on-change #(rf/dispatch [:set-url (.-value (.-target %))])
+                }]]]
     [b/Row
      [:div.col-sm-3
       [b/Label {:for "send"} "To transcribe the image"]]
      [:div.col-sm-9
-      [b/Button {:id "send" :on-click #(rf/dispatch [:fetch-transcription])} "Transcribe!"]]]
+      [b/Button (maybe-disable {:id "send" :on-click #(rf/dispatch [:fetch-transcription])}) "Transcribe!"]]]
     [b/Row]
     [b/Row
-     [:div.col-sm-12
+     [:div.col-sm-12 {:class (if @(rf/subscribe [:transcription]) "visible" "hidden")}
       [b/Alert {:color "success"} @(rf/subscribe [:transcription])]]]
     [b/Row
-     [:div.col-sm-12
+     [:div.col-sm-12 {:class (if @(rf/subscribe [:common/error]) "visible" "hidden")}
       [b/Alert {:color "warning"} @(rf/subscribe [:common/error])]]]]])
 
