@@ -11,14 +11,12 @@
             [twitter.api.restful :as tar]
             ;;    [twitter.api.streaming :as tas]
             ;;    [twitter.callbacks :as tc]
-            ;;    [twitter.callbacks.handlers :as tch]
+            [twitter.callbacks.handlers :as tch]
             [twitter.oauth :as to]
-            [twitter-streaming-client.core :as client]
-            ;; )
-            ;;   (:import
-            ;; ;;   (twitter.callbacks.protocols SyncSingleCallback)
-            ;;    (twitter.callbacks.protocols SyncStreamingCallback)))
-            ))
+            [twitter-streaming-client.core :as client])
+  (:import
+   (twitter.callbacks.protocols SyncSingleCallback)
+   (twitter.callbacks.protocols SyncStreamingCallback)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;
@@ -82,9 +80,12 @@
   (let [parent-id (:in_reply_to_status_id_str tweet)]
     (if
       parent-id
-      (tar/statuses-show :oauth-creds credentials
-                         :params {:id parent-id
-                                  :include-entities true}))))
+      (tar/statuses-show-id :oauth-creds credentials
+                            :params {:id parent-id
+                                     :include-entities true}
+                            :callbacks (SyncSingleCallback. tch/response-return-body
+                                                            tch/response-throw-error
+                                                            tch/exception-rethrow)))))
 
 (defn image-from-tweet
   "Return the url of a media entity from this `tweet`, assumed to be a map
@@ -94,7 +95,12 @@
   ([tweet]
    (image-from-tweet tweet 0))
   ([tweet index]
-   (:media-url (get-in tweet (nth [:entities :media] index)))))
+   (:media_url
+    (nth
+     (or
+      (get-in tweet [:extended_entities :media])
+      (get-in tweet [:entities :media]))
+     index))))
 
 (defn truncate
   "If string `s` is longer than `n` characters, return a string like `s`
@@ -112,7 +118,7 @@
   [mention]
   (let [screen-name (str "@" (get-in mention [:user :screen_name]))
         image (image-from-tweet (tweet-replied-to [mention]))
-        trascription (if image
+        transcription (if image
                        (try
                          (str "Hi, "
                               screen-name
@@ -129,12 +135,12 @@
                        "I'm sorry, I didn't find an image in that tweet.")]
     (log/debug (str "replying to mention from " name))
     (try
-      (statuses-update :oauth-creds credentials
-                       :params {:status (truncate transcription 279)
-                                :in_reply_to_status_id (:id_str mention)},
-                       :callbacks (SyncSingleCallback. response-return-body
-                                                       response-throw-error
-                                                       exception-rethrow))
+      (tar/statuses-update :oauth-creds credentials
+                           :params {:status (truncate transcription 279)
+                                    :in_reply_to_status_id (:id_str mention)}
+                           :callbacks (SyncSingleCallback. tch/response-return-body
+                                                           tch/response-throw-error
+                                                           tch/exception-rethrow))
       (catch Exception e (log/error e (str "error replying to mention from " (get-in mention [:user :screen_name])))))))
 
 (defn reply-to-mentions
@@ -151,10 +157,10 @@
     (reply-to-mentions mentions)))
 
 (defn bot []
-  (let [state (atom (assoc empty-state :minutes-since-update 30))
+  (let [;;state (atom (assoc empty-state :minutes-since-update 30))
         previous (atom #{})]
 
-    (start-streams)
+    ;;(start-streams)
 
     (future (log/debug "STARTING USER STREAM")
       (do-every 60500 handle-user-stream))))

@@ -12,6 +12,7 @@
                  [cljs-ajax "0.8.0"]
                  [cljsjs/react-popper "0.10.4-0"]
                  [cljsjs/react-transition-group "2.4.0-0"]
+                 [org.clojure/data.json "0.2.6"]
                  [clojure.java-time "0.3.2"]
                  [com.cognitect/transit-clj "0.8.313"]
                  [compojure "1.6.1"]

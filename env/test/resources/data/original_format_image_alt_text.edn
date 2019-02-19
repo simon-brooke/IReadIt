@@ -1,0 +1,147 @@
+{:quote_count 0,
+ :in_reply_to_screen_name nil,
+ :is_quote_status false,
+ :matching_rules
+ [{:tag nil, :id 794211184496951300}],
+ :coordinates nil,
+ :filter_level "low",
+ :in_reply_to_status_id_str nil,
+ :place nil,
+ :timestamp_ms "1485361639674",
+ :possibly_sensitive false,
+ :geo nil,
+ :in_reply_to_status_id nil,
+ :entities
+ {:hashtags [],
+  :urls [],
+  :user_mentions [],
+  :symbols [],
+  :media
+  [{:description "Idiot",
+    :sizes
+    {:small {:w 680, :h 383, :resize "fit"},
+     :medium {:w 800, :h 450, :resize "fit"},
+     :thumb {:w 150, :h 150, :resize "crop"},
+     :large {:w 800, :h 450, :resize "fit"}},
+    :media_url_https
+    "https://pbs.twimg.com/media/C3B5jtZVIAAtCue.jpg",
+    :type "photo",
+    :media_url
+    "http://pbs.twimg.com/media/C3B5jtZVIAAtCue.jpg",
+    :id 824292386197020700,
+    :expanded_url
+    "https://twitter.com/TestMcTest_/status/824292577188773888/photo/1",
+    :url "https://t.co/Y286t9R6Bi",
+    :display_url "pic.twitter.com/Y286t9R6Bi",
+    :indices [23 46],
+    :id_str "824292386197020672"}]},
+ :source
+ "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+ :lang "en",
+ :in_reply_to_user_id_str nil,
+ :id 824292577188773900,
+ :contributors nil,
+ :extended_entities
+ {:media
+  [{:description "Idiot",
+    :sizes
+    {:small {:w 680, :h 383, :resize "fit"},
+     :medium {:w 800, :h 450, :resize "fit"},
+     :thumb {:w 150, :h 150, :resize "crop"},
+     :large {:w 800, :h 450, :resize "fit"}},
+    :media_url_https
+    "https://pbs.twimg.com/media/C3B5jtZVIAAtCue.jpg",
+    :type "photo",
+    :media_url
+    "http://pbs.twimg.com/media/C3B5jtZVIAAtCue.jpg",
+    :id 824292386197020700,
+    :expanded_url
+    "https://twitter.com/TestMcTest_/status/824292577188773888/photo/1",
+    :url "https://t.co/Y286t9R6Bi",
+    :display_url "pic.twitter.com/Y286t9R6Bi",
+    :indices [23 46],
+    :id_str "824292386197020672"}
+   {:description "Dog",
+    :sizes
+    {:medium {:w 720, :h 960, :resize "fit"},
+     :large {:w 720, :h 960, :resize "fit"},
+     :thumb {:w 150, :h 150, :resize "crop"},
+     :small {:w 510, :h 680, :resize "fit"}},
+    :media_url_https
+    "https://pbs.twimg.com/media/C3B5nR3VIAAKJPn.jpg",
+    :type "photo",
+    :media_url
+    "http://pbs.twimg.com/media/C3B5nR3VIAAKJPn.jpg",
+    :id 824292447526133800,
+    :expanded_url
+    "https://twitter.com/TestMcTest_/status/824292577188773888/photo/1",
+    :url "https://t.co/Y286t9R6Bi",
+    :display_url "pic.twitter.com/Y286t9R6Bi",
+    :indices [23 46],
+    :id_str "824292447526133760"}]},
+ :display_text_range [0 22],
+ :truncated false,
+ :retweeted false,
+ :in_reply_to_user_id nil,
+ :id_str "824292577188773888",
+ :favorited false,
+ :user
+ {:description "http://www.gnip.com",
+  :profile_link_color "1DA1F2",
+  :profile_sidebar_border_color "C0DEED",
+  :profile_image_url
+  "http://abs.twimg.com/sticky/default_profile_images/default_profile_3_normal.png",
+  :profile_use_background_image true,
+  :default_profile true,
+  :profile_background_image_url "",
+  :is_translator false,
+  :profile_text_color "333333",
+  :name "Test McTest",
+  :profile_background_image_url_https "",
+  :favourites_count 1,
+  :screen_name "TestMcTest_",
+  :listed_count 0,
+  :profile_image_url_https
+  "https://abs.twimg.com/sticky/default_profile_images/default_profile_3_normal.png",
+  :statuses_count 3,
+  :contributors_enabled false,
+  :following nil,
+  :lang "en",
+  :utc_offset nil,
+  :notifications nil,
+  :default_profile_image true,
+  :profile_background_color "F5F8FA",
+  :id 750795692558483500,
+  :follow_request_sent nil,
+  :derived
+  {:locations
+   [{:country "United States",
+     :country_code "US",
+     :locality "Boulder",
+     :region "Colorado",
+     :sub_region "Boulder County",
+     :full_name
+     "Boulder, Colorado, United States",
+     :geo
+     {:coordinates [-105.27055 40.01499],
+      :type "point"}}]},
+  :url "http://www.gnip.com",
+  :translator_type "none",
+  :time_zone nil,
+  :profile_sidebar_fill_color "DDEEF6",
+  :protected false,
+  :profile_background_tile false,
+  :id_str "750795692558483456",
+  :geo_enabled false,
+  :location "Boulder, CO",
+  :followers_count 1,
+  :friends_count 1,
+  :verified false,
+  :created_at
+  "Wed Jul 06 20:56:57 +0000 2016"},
+ :reply_count 0,
+ :retweet_count 0,
+ :favorite_count 0,
+ :created_at "Wed Jan 25 16:27:19 +0000 2017",
+ :text
+ "Image Alt-Text Example https://t.co/Y286t9R6Bi"}

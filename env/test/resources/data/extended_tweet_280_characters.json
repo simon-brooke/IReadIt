@@ -1,0 +1,156 @@
+{
+  "created_at": "Tue Sep 26 21:06:44 +0000 2017",
+  "id": 912785533910306817,
+  "id_str": "912785533910306817",
+  "text": "So this is my first experimental Tweet with 280 characters, enabling me to express all my hopes and dreams for the… https://t.co/Nz6dQf3rIr",
+  "source": "Twitter Web Client",
+  "truncated": true,
+  "in_reply_to_status_id": null,
+  "in_reply_to_status_id_str": null,
+  "in_reply_to_user_id": null,
+  "in_reply_to_user_id_str": null,
+  "in_reply_to_screen_name": null,
+  "user": {
+    "id": 17200003,
+    "id_str": "17200003",
+    "name": "Jim ❄️☃🌎",
+    "screen_name": "snowman",
+    "location": "MN ⇨ all over ⇨ CO",
+    "url": null,
+    "description": "family, travel, music, snow, urban farming, photography, coding, weather, hydrology, early-warning systems. From Minnesota, live in Colorado.",
+    "translator_type": "regular",
+    "protected": false,
+    "verified": false,
+    "followers_count": 751,
+    "friends_count": 457,
+    "listed_count": 39,
+    "favourites_count": 2094,
+    "statuses_count": 1637,
+    "created_at": "Wed Nov 05 23:06:37 +0000 2008",
+    "utc_offset": -21600,
+    "time_zone": "Mountain Time (US & Canada)",
+    "geo_enabled": true,
+    "lang": "en",
+    "contributors_enabled": false,
+    "is_translator": false,
+    "profile_background_color": "C0DEED",
+    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/846867852/0962a373696e2080d26659b920880fc8.jpeg",
+    "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/846867852/0962a373696e2080d26659b920880fc8.jpeg",
+    "profile_background_tile": true,
+    "profile_link_color": "ABB8C2",
+    "profile_sidebar_border_color": "FFFFFF",
+    "profile_sidebar_fill_color": "DDEEF6",
+    "profile_text_color": "333333",
+    "profile_use_background_image": true,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/697445972402540546/2CYK3PWX_normal.jpg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/697445972402540546/2CYK3PWX_normal.jpg",
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/17200003/1399004533",
+    "default_profile": false,
+    "default_profile_image": false,
+    "following": null,
+    "follow_request_sent": null,
+    "notifications": null
+  },
+  "geo": null,
+  "coordinates": null,
+  "place": {
+    "id": "fd70c22040963ac7",
+    "url": "https://api.twitter.com/1.1/geo/id/fd70c22040963ac7.json",
+    "place_type": "city",
+    "name": "Boulder",
+    "full_name": "Boulder, CO",
+    "country_code": "US",
+    "country": "United States",
+    "bounding_box": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -105.301776,
+            39.953552
+          ],
+          [
+            -105.301776,
+            40.094411
+          ],
+          [
+            -105.183597,
+            40.094411
+          ],
+          [
+            -105.183597,
+            39.953552
+          ]
+        ]
+      ]
+    },
+    "attributes": {
+
+    }
+  },
+  "contributors": null,
+  "is_quote_status": false,
+  "extended_tweet": {
+    "full_text": "So this is my first experimental Tweet with 280 characters, enabling me to express all my hopes and dreams for the future of the Twitter platform, while also ignoring the voices in my head about poorly written parsers exploding around the globe... #AddingText4Exactly280Characters",
+    "display_text_range": [
+      0,
+      280
+    ],
+    "entities": {
+      "hashtags": [
+        {
+          "text": "AddingText4Exactly280Characters",
+          "indices": [
+            248,
+            280
+          ]
+        }
+      ],
+      "urls": [
+
+      ],
+      "user_mentions": [
+
+      ],
+      "symbols": [
+
+      ]
+
+    }
+  },
+  "quote_count": 0,
+  "reply_count": 4,
+  "retweet_count": 0,
+  "favorite_count": 2,
+  "entities": {
+    "hashtags": [
+
+    ],
+    "urls": [
+      {
+        "url": "https://t.co/Nz6dQf3rIr",
+        "expanded_url": "https://twitter.com/i/web/status/912785533910306817",
+        "display_url": "twitter.com/i/web/status/9…",
+        "indices": [
+          116,
+          139
+        ]
+      }
+    ],
+    "user_mentions": [
+
+    ],
+    "symbols": [
+
+    ]
+  },
+  "favorited": false,
+  "retweeted": false,
+  "filter_level": "low",
+  "lang": "en",
+  "matching_rules": [
+    {
+      "tag": null
+    }
+  ]
+}

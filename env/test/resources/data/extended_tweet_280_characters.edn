@@ -1,0 +1,113 @@
+
+{:quote_count 0,
+ :in_reply_to_screen_name nil,
+ :is_quote_status false,
+ :matching_rules [{:tag nil}],
+ :coordinates nil,
+ :filter_level "low",
+ :in_reply_to_status_id_str nil,
+ :place
+ {:name "Boulder",
+  :place_type "city",
+  :country_code "US",
+  :id "fd70c22040963ac7",
+  :url
+  "https://api.twitter.com/1.1/geo/id/fd70c22040963ac7.json",
+  :bounding_box
+  {:type "Polygon",
+   :coordinates
+   [[[-105.301776 39.953552]
+     [-105.301776 40.094411]
+     [-105.183597 40.094411]
+     [-105.183597 39.953552]]]},
+  :full_name "Boulder, CO",
+  :attributes {},
+  :country "United States"},
+ :geo nil,
+ :in_reply_to_status_id nil,
+ :extended_tweet
+ {:full_text
+  "So this is my first experimental Tweet with 280 characters, enabling me to express all my hopes and dreams for the future of the Twitter platform, while also ignoring the voices in my head about poorly written parsers exploding around the globe... #AddingText4Exactly280Characters",
+  :display_text_range [0 280],
+  :entities
+  {:hashtags
+   [{:text "AddingText4Exactly280Characters",
+     :indices [248 280]}],
+   :urls [],
+   :user_mentions [],
+   :symbols []}},
+ :entities
+ {:hashtags [],
+  :urls
+  [{:url "https://t.co/Nz6dQf3rIr",
+    :expanded_url
+    "https://twitter.com/i/web/status/912785533910306817",
+    :display_url "twitter.com/i/web/status/9…",
+    :indices [116 139]}],
+  :user_mentions [],
+  :symbols []},
+ :source "Twitter Web Client",
+ :lang "en",
+ :in_reply_to_user_id_str nil,
+ :id 912785533910306800,
+ :contributors nil,
+ :truncated true,
+ :retweeted false,
+ :in_reply_to_user_id nil,
+ :id_str "912785533910306817",
+ :favorited false,
+ :user
+ {:description
+  "family, travel, music, snow, urban farming, photography, coding, weather, hydrology, early-warning systems. From Minnesota, live in Colorado.",
+  :profile_link_color "ABB8C2",
+  :profile_sidebar_border_color "FFFFFF",
+  :profile_image_url
+  "http://pbs.twimg.com/profile_images/697445972402540546/2CYK3PWX_normal.jpg",
+  :profile_use_background_image true,
+  :default_profile false,
+  :profile_background_image_url
+  "http://pbs.twimg.com/profile_background_images/846867852/0962a373696e2080d26659b920880fc8.jpeg",
+  :is_translator false,
+  :profile_text_color "333333",
+  :profile_banner_url
+  "https://pbs.twimg.com/profile_banners/17200003/1399004533",
+  :name "Jim ❄️☃🌎",
+  :profile_background_image_url_https
+  "https://pbs.twimg.com/profile_background_images/846867852/0962a373696e2080d26659b920880fc8.jpeg",
+  :favourites_count 2094,
+  :screen_name "snowman",
+  :listed_count 39,
+  :profile_image_url_https
+  "https://pbs.twimg.com/profile_images/697445972402540546/2CYK3PWX_normal.jpg",
+  :statuses_count 1637,
+  :contributors_enabled false,
+  :following nil,
+  :lang "en",
+  :utc_offset -21600,
+  :notifications nil,
+  :default_profile_image false,
+  :profile_background_color "C0DEED",
+  :id 17200003,
+  :follow_request_sent nil,
+  :url nil,
+  :translator_type "regular",
+  :time_zone "Mountain Time (US & Canada)",
+  :profile_sidebar_fill_color "DDEEF6",
+  :protected false,
+  :profile_background_tile true,
+  :id_str "17200003",
+  :geo_enabled true,
+  :location "MN ⇨ all over ⇨ CO",
+  :followers_count 751,
+  :friends_count 457,
+  :verified false,
+  :created_at
+  "Wed Nov 05 23:06:37 +0000 2008"},
+ :reply_count 4,
+ :retweet_count 0,
+ :favorite_count 2,
+ :created_at "Tue Sep 26 21:06:44 +0000 2017",
+ :text
+ "So this is my first experimental Tweet with 280 characters, enabling me to express all my hopes and dreams for the… https://t.co/Nz6dQf3rIr"
+}
+

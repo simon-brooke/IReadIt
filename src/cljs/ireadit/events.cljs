@@ -46,7 +46,7 @@
 (rf/reg-event-db
   :set-transcription
   (fn [db [_ response]]
-    (js/console.log (str "Failed to fetch transcription data" response))
+    (js/console.log (str "Fetched transcription data `" response "`"))
     (dissoc (assoc db :transcription response) :pending)))
 
 (rf/reg-event-db
