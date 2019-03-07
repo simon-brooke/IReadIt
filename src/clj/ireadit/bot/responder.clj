@@ -37,7 +37,7 @@
 ;;;; Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301,
 ;;;; USA.
 ;;;;
-;;;; Copyright (C) 2016 Simon Brooke for Radical Independence Campaign
+;;;; Copyright (C) 2019 Simon Brooke
 ;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
