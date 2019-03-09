@@ -2,6 +2,7 @@
   (:require [cemerick.url :refer (url-decode)]
             [clojure.tools.logging :as log]
             [compojure.api.sweet :refer :all]
+            [ireadit.splitter :refer [split-into-tweets]]
             [ireadit.tesseractor :refer [ocr]]
             [ring.util.http-response :refer :all]
             [schema.core :as s]))
@@ -42,9 +43,9 @@
             :tags ["tesseractor"]
 
             (POST "/ocr/:uri" []
-                  :return       String
+                  :return      {:tweets [String]}
                   :path-params [uri :- String]
                   (ok (let [decoded (url-decode uri)
-                            text (ocr decoded)]
-                        (log/info (str "ocr '" decoded "' => '" text "'"))
-                        text))))))
+                            tweets (split-into-tweets (ocr decoded))]
+                        (log/info (str "ocr '" decoded "' => '" tweets "'"))
+                        {:tweets tweets}))))))

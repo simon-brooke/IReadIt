@@ -17,7 +17,6 @@
     (assoc m :disabled "disabled")
     m))
 
-
 (defn form-page []
   [:div.container-fluid {:id "main-container"}
    [:h1 "Transcribe the text of an image"]
@@ -35,10 +34,20 @@
      [:div.col-sm-9
       [b/Button (maybe-disable {:id "send" :on-click #(rf/dispatch [:fetch-transcription])}) "Transcribe!"]]]
     [b/Row]
-    [b/Row
-     [:div.col-sm-12 {:class (if @(rf/subscribe [:transcription]) "visible" "hidden")}
-      [b/Alert {:color "success"} @(rf/subscribe [:transcription])]]]
-    [b/Row
-     [:div.col-sm-12 {:class (if @(rf/subscribe [:error]) "visible" "hidden")}
-      [b/Alert {:color "warning"} @(rf/subscribe [:error])]]]]])
+     (map #(vector
+            :div.tweet {:class "row"}
+            [:div.col-sm-1
+                   [:img {:src "/img/ireadit.png"
+                          :width "64"
+                          :height "64"
+                           :class "rounded-circle"
+                           :alt "Please don't post text as images to social media"}]]
+            [:div.col-sm-1]
+            [:div.col-sm-10 [:div [:b "IReadIt"]] %])
+          (let [m @(rf/subscribe [:transcription])]
+            (when (map? m) (m "tweets"))))
+    [b/Collapse {:class (if @(rf/subscribe [:error]) "col-sm-12 show" "hide")}
+     [b/Alert {:color "warning"} @(rf/subscribe [:error])]]]])
+
+(vector 'div.foo "foo")
 
